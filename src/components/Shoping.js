@@ -7,6 +7,7 @@ const Shoping = () => {
   return (
     
     <div><Navbar/><Shop/> </div>
+
   )
 }
 

@@ -1,61 +1,73 @@
-import React from 'react'
-import './Home.css';
+import { navigate } from '@reach/router';
+import { Button, Card, Col, Row } from 'antd';
+import { Footer } from 'antd/es/layout/layout';
+import { MakeBggrey, MakeBgWhite } from '../styles/ContentLayout';
 import Navbar from './Navbar';
-import { Carousel } from 'antd';
-import { Card, Col, Row } from 'antd';
 
-const contentStyle = {
-  marginTop: "10rem",
-  marginBottom: "5rem",
-  height: '80vh',
-  width:"100vw",
-  color: 'black',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
 
 const Home = () => {
 
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
+
+  const handleClick = () => {
+
+
+    let path = `./shoping`;
+    navigate(path);
+
+
   }
+
   return (
     <div className="Home">
-      <Navbar/>
-      <h1></h1>
-    {/* <Carousel afterChange={onChange}>
-      <div>
-        <img  src="https://png.pngtree.com/png-vector/20201128/ourmid/pngtree-casual-shoes-png-image_2394294.jpg" style={contentStyle}/>
-      </div>
-      <div>
-        <img src="https://png.pngtree.com/png-vector/20201128/ourmid/pngtree-casual-shoes-png-image_2394294.jpg" style={contentStyle}/>
-      </div>
-      <div>
-        <img src="https://png.pngtree.com/png-vector/20201128/ourmid/pngtree-casual-shoes-png-image_2394294.jpg" style={contentStyle}/>
-      </div>
-      <div>
-        <img src="https://png.pngtree.com/png-vector/20201128/ourmid/pngtree-casual-shoes-png-image_2394294.jpg" style={contentStyle}/>
-      </div>
-    </Carousel> */}
-    {/* <Row gutter={16}>
-    <Col span={8}>
-      <Card title="Card title" bordered={false}>
-        Card content
-      </Card>
-    </Col>
-    <Col span={8}>
-      <Card title="Card title" bordered={false}>
-        Card content
-      </Card>
-    </Col>
-    <Col span={8}>
-      <Card title="Card title" bordered={false}>
-        Card content
-      </Card>
-    </Col>
-  </Row> */}
-    </div>
+      <Navbar />
+      <MakeBgWhite>
+        <Row gutter={16}>
+          <Col style={{ margin: "10rem", marginRight: "50px" }}>
+            <h1 style={{ fontSize: "35px" }}> Time To Treat YOUR FEET!!!</h1>
+            <p style={{ fontSize: "22px" }}>Welcome to BIS Multi vendor Sneaker Shop</p>
+            <p style={{ fontSize: "22px" }}>We serve you the best quality shoes  </p>
+            <p style={{ fontSize: "22px" }}>with various features which makes your</p>
+            <p style={{ fontSize: "22px" }}>work easier and faster.</p>
+            <p style={{ fontSize: "22px" }}>Ready to explore? Join Us and Enjoyy!!</p>
+            <Button type="primary" size="large" onClick={handleClick}> SHOP NOW</Button>
+          </Col>
+
+          <Col style={{ width: "100%" }}>
+            <img src="/assets/shoes.png" style={{ width: "100%" }} />
+          </Col>
+
+        </Row>
+
+
+      </MakeBgWhite>
+      <MakeBggrey>
+        <h1> OUR FEATURE SERVICE</h1>
+        <Row gutter={16}>
+          <Col span={8}>
+            <Card title="Card title" bordered={false} style={{ width: "300px" }} >
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </Card>
+          </Col>
+          <Col span={8}>
+            <Card title="Card title" bordered={false} style={{ width: "300px" }}>
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </Card>
+          </Col>
+          <Col span={8}>
+            <Card title="Card title" bordered={false} style={{ width: "300px" }} >
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </Card>
+          </Col>
+        </Row>
+      </MakeBggrey>
+      <Footer style={{ textAlign: 'center', height: "20rem", backgroundColor: "red" }}>Ant Design ©2023 Created by Ant UED</Footer>
+    </div >
   );
 };
 

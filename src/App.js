@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
@@ -12,32 +11,43 @@ import Log from './components/Log';
 import Login from './components/Login';
 import Cart from './components/Cart';
 
-function App() {console.log("hello")
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './components/GlobalStyle';
+
+
+const App = () => {
+
+
+
   return (
-   <> 
-     <BrowserRouter>
 
-       <Routes>
-        
-          {/* <Route path='/' element={<App/>}/>   */}
 
-         <Route path='/' element={<Home/>}/>
-         <Route path='/about' element={<About/>}/>
-         <Route path='/products' element={<Products/>}/>
-         <Route path='/shoping' element={<Shoping/>}/>
-         <Route path='/contact' element={<Contact/>}/>
-         <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
-         <Route path='/login' element={<Login/>}/>
-         <Route path='/designer' element={<Designer/>}/>
-         <Route path='/log' element={<Log/>}/>
-         <Route path='/cart' element={<Cart/>}/>
-    {/* <Route path='/' element={<Login/>}/> */}
-       </Routes>
 
-       </BrowserRouter>
-  </>
+    <BrowserRouter>
+
+      <Routes>
+
+        {/* <GlobalStyle /> */}
+
+        {/* <Route path='/' element={<App/>}/>   */}
+
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/shoping' element={<Shoping />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/singleproduct/:id' element={<SingleProduct />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/designer' element={<Designer />} />
+        <Route path='/log' element={<Log />} />
+        <Route path='/cart' element={<Cart />} />
+        {/* <Route path='/' element={<Login/>}/> */}
+      </Routes>
+
+    </BrowserRouter>
+
   );
-  
+
 }
 
 export default App;
