@@ -6,7 +6,10 @@ import Navbar from './Navbar'
 
 const Designer = () => {
   return (
-    <div><Navbar/><Design/></div>
+    <div><Navbar />
+      <Design />
+      </div>
+
   )
 }
 

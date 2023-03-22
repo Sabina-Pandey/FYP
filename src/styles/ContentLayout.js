@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 
 // interface makeProps {
 //     children: ReactNode;
@@ -9,9 +9,9 @@ export const MakeBggrey = ({ padding, children }) => {
     return (
         <div
             style={{
-                backgroundColor: "rgba(246, 246, 246 )",
-                padding: padding ? padding : "1rem",
-                margin: " 2rem",
+                backgroundColor: "Lightblue",
+                padding: padding ? padding : "2rem",
+                margin: " 1rem",
                 borderRadius: "0.2rem",
                 display: "flex",
                 alignItems: "center",
@@ -19,29 +19,30 @@ export const MakeBggrey = ({ padding, children }) => {
                 flexDirection: "column",
                 gap: "1rem",
                 boxShadow: "rgb(0 0 0 / 20%) 0px 3px   10px",
-                marginTop: "10rem"
+                marginTop: "5rem"
             }}
+           
         >
             {children}
         </div>
     );
 };
 
-export const MakeBgWhite = ({ padding, children }) => {
+export const MakeBgWhite = ({ children }) => {
     return (
         <div
-            style={{
-                // backgroundColor: "rgba(246, 246, 246 )",
-                // padding: padding ? padding : "1rem",
-                // margin: " 2rem",
-                // borderRadius: "0.2rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                gap: "1rem",
-                marginTop: "10rem"
-            }}
+            // style={{
+            //     backgroundColor: "white",
+            //     // padding: padding ? padding : "1rem",
+            //     // margin: " 2rem",
+            //     // borderRadius: "0.2rem",
+            //     // display: "flex",
+            //     // alignItems: "center",
+            //     // justifyContent: "center",
+            //     // flexDirection: "column",
+            //     // gap: "1rem",
+            //     // marginTop: "10rem"
+            // }}
         >
             {children}
         </div>

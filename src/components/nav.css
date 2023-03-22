@@ -27,9 +27,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #a0f3f3 ;
+    background-color: black ;
     font-size: 1.2rem;
-    width: 99%;
+    width: 98%;
     height: 100px;
     padding: 5px 30px ;
     box-shadow: 0 5px 15px rgba(12, 10, 10, 0.06);
@@ -55,14 +55,14 @@
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
-    color: rgb(8, 9, 9);
+    color: white;
     transition: 0.3s ease-in-out;
 
   }
 
   #navbar li a:hover,
   #navbar li a.active{
-    color: #df4e4e;
+    color: #b78181;
   }
 
   #navbar li a:hover::after,
@@ -71,7 +71,7 @@
     content: "";
     width: 50%;
     height: 2px;
-    background-color:#ffffff ;
+    background-color: black ;
     position:absolute;
     bottom: -4px;
     left: 20px;
