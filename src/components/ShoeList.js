@@ -1,7 +1,8 @@
 import '../components/Shop.css';
 
 
-function ShoeList({ shoe,addToCart }) {
+function ShoeList({ shoe, addToCart }) {
+    console.log("check");
     return (
         <div className='flex'>
             {
@@ -9,14 +10,14 @@ function ShoeList({ shoe,addToCart }) {
                     return (
                         <div style={{ width: '30%' }}>
                             <div className='shop-item'>
-                                <img src={ shoeItem.url} width="100%" />
+                                <img src={shoeItem.url} width="100%" />
                                 <p>{shoeItem.product_name}</p>
                                 <p> Rs. {shoeItem.price}</p>
                                 <button
-                                    onClick={()=> addToCart(shoeItem)}
+                                    onClick={() => addToCart(shoeItem)}
                                 >Add to Cart</button>
-                                </div>
-                               
+                            </div>
+
                         </div>
                     )
 

@@ -8,6 +8,8 @@ import Designer from './components/Designer';
 import Log from './components/Log';
 import Login from './components/Login';
 import CartList from './components/CartList';
+import ShoeList from './components/ShoeList';
+import Shop from './components/Shop';
 
 
 // import { ThemeProvider } from 'styled-components';
@@ -32,12 +34,12 @@ const App = () => {
 
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/shoping' element={<Shoping />} />
+        <Route path='/shoping' element={<Shop />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/designer' element={<Designer />} />
         <Route path='/log' element={<Log />} />
-        <Route path='/cart' element={<CartList />} />
+        <Route path='/cart/shoeItem.product_name' element={<CartList />} />
         {/* <Route path='/' element={<Login/>}/> */}
       </Routes>
 
